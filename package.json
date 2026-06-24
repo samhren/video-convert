@@ -1,0 +1,11 @@
+{
+    "name": "video-convert",
+    "private": true,
+    "version": "1.0.0",
+    "devDependencies": {
+        "concurrently": "^10.0.3"
+    },
+    "scripts": {
+        "dev": "concurrently -n edge,web,worker -c blue,green,magenta -k --kill-others-on-fail \"pnpm --filter edge dev\" \"pnpm --filter web dev\" \"pnpm --filter @video-convert/worker dev\""
+    }
+}

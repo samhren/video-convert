@@ -1,0 +1,8 @@
+{
+	"name": "video-convert-edge",
+	"main": "src/index.ts",
+	"compatibility_date": "2026-06-24",
+	"observability": {
+		"enabled": true,
+	},
+}
