@@ -6,11 +6,16 @@
         "deploy": "wrangler deploy",
         "dev": "wrangler dev",
         "start": "wrangler dev",
-        "test": "vitest",
+        "test": "vitest run",
+        "test:watch": "vitest",
+        "test:coverage": "vitest run --coverage",
+        "typecheck": "tsc --noEmit && tsc -p test/tsconfig.json --noEmit",
+        "build": "wrangler deploy --dry-run --outdir dist",
         "cf-typegen": "wrangler types"
     },
     "devDependencies": {
         "@cloudflare/vitest-pool-workers": "^0.12.4",
+        "@vitest/coverage-istanbul": "~3.2.0",
         "typescript": "^5.5.2",
         "vitest": "~3.2.0",
         "wrangler": "^4.104.0"

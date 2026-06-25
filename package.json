@@ -6,6 +6,11 @@
         "concurrently": "^10.0.3"
     },
     "scripts": {
-        "dev": "concurrently -n edge,web,worker -c blue,green,magenta -k --kill-others-on-fail \"pnpm --filter edge dev\" \"pnpm --filter web dev\" \"pnpm --filter @video-convert/worker dev\""
+        "dev": "concurrently -n edge,web,worker -c blue,green,magenta -k --kill-others-on-fail \"pnpm --filter edge dev\" \"pnpm --filter web dev\" \"pnpm --filter @video-convert/worker dev\"",
+        "typecheck": "pnpm -r run typecheck",
+        "lint": "pnpm -r run lint",
+        "build": "pnpm -r run build",
+        "test": "pnpm -r run test",
+        "test:coverage": "pnpm -r run test:coverage"
     }
 }
