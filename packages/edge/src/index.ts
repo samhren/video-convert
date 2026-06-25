@@ -11,8 +11,12 @@
  * Learn more at https://developers.cloudflare.com/workers/
  */
 
+// Re-exported so the `JOB_DO` Durable Object binding can resolve the class.
+// Worker -> DO request routing is a later slice; the fetch handler is unchanged.
+export { JobDO } from './job-do';
+
 export default {
 	async fetch(request, env, ctx): Promise<Response> {
-		return new Response("Hello World!");
+		return new Response('Hello World!');
 	},
 } satisfies ExportedHandler<Env>;

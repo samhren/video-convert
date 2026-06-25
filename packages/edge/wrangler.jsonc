@@ -5,4 +5,8 @@
 	"observability": {
 		"enabled": true,
 	},
+	"durable_objects": {
+		"bindings": [{ "name": "JOB_DO", "class_name": "JobDO" }],
+	},
+	"migrations": [{ "tag": "v1", "new_sqlite_classes": ["JobDO"] }],
 }
