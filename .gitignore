@@ -12,6 +12,11 @@ dist
 dist-ssr
 *.local
 
+# Test coverage
+coverage
+*.lcov
+.nyc_output
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
@@ -25,3 +30,14 @@ dist-ssr
 !.vscode/
 !.vscode/settings.json
 !.vscode/extensions.json
+
+# Build / cache
+*.tsbuildinfo
+.cache
+
+# Wrangler
+.dev.vars*
+!.dev.vars.example
+.env*
+!.env.example
+.wrangler/
